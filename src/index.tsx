@@ -135,7 +135,7 @@ export interface FastImageProps extends AccessibilityProps, ViewProps {
     /**
      * Render children within the image.
      */
-    children?: React.ReactNode
+    children?: React.ReactNode|React.ReactNode[]
 }
 
 const resolveDefaultSource = (
@@ -173,7 +173,7 @@ function FastImageBase({
     onLoadEnd,
     style,
     fallback,
-    children,
+    children=null,
     // eslint-disable-next-line no-shadow
     resizeMode = 'cover',
     forwardedRef,
