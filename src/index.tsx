@@ -199,7 +199,9 @@ function FastImageBase({
                     resizeMode={resizeMode}
                     blurRadius={blurRadius}
                 />
-                {children}
+                    <React.Fragment>
+                        {children}
+                    </React.Fragment>
             </View>
         )
     }
@@ -227,7 +229,9 @@ function FastImageBase({
                 onFastImageLoadEnd={onLoadEnd}
                 resizeMode={resizeMode}
             />
-            {children}
+                <React.Fragment>
+                        {children}
+                </React.Fragment>
         </View>
     )
 }
